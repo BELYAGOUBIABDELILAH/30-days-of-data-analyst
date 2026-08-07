@@ -1,7 +1,7 @@
 {
-  "current_day": 1,
+  "current_day": 3,
   "total_days": 30,
-  "released_days": [],
+  "released_days": [1, 2],
   "start_date": "2026-08-08",
   "schedule": "19:00 UTC+1 (18:00 UTC) daily"
 }
