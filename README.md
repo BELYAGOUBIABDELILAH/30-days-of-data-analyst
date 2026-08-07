@@ -17,7 +17,8 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 ## Project Themes
 
 <!-- AUTO-GENERATED-THEMES-START -->
-*Themes will appear as projects are released*
+- **Financial Analysis** — Stock price trends and volatility
+- **Business Analytics** — Restaurant ratings, electronics sales, and sales team performance
 <!-- AUTO-GENERATED-THEMES-END -->
 
 ---
@@ -27,6 +28,8 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 <!-- AUTO-GENERATED-CATALOG-START -->
 | Day | Project | Domain | Stack | Link |
 | :---: | :--- | :--- | :--- | :---: |
+| **01** | [Tesla Stock Analysis](./Day%201%20-Tesla-Stock-Analysis) | Time Series | Pandas, Matplotlib, Seaborn | [Notebook](./Day%201%20-Tesla-Stock-Analysis/Day-1.ipynb) |
+| **02** | [Zomato Restaurant Analysis](./Day%202%20-Zomato-Restaurant-Analysis) | Food Industry | Pandas, NumPy, Seaborn | [Notebook](./Day%202%20-Zomato-Restaurant-Analysis/Day-2.ipynb) |
 <!-- AUTO-GENERATED-CATALOG-END -->
 
 ---
