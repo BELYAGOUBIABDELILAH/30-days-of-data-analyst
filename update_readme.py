@@ -43,6 +43,32 @@ PROJECT_METADATA = {
     30: {"name": "Used Car Price Analysis", "domain": "Regression", "stack": "Scikit-learn, XGBoost"},
 }
 
+# Theme mapping for each project
+DOMAIN_TO_THEME = {
+    "Time Series": "Financial Analysis",
+    "Food Industry": "Business Analytics",
+    "E-commerce": "Business Analytics",
+    "Macroeconomics": "Economic Analysis",
+    "Clustering": "Machine Learning",
+    "Business Intelligence": "Data Visualization",
+    "Regression": "Machine Learning",
+    "Classification": "Banking & Finance",
+    "Sales Analytics": "Business Analytics",
+    "Retail": "Business Analytics",
+    "Energy": "Energy & Environment",
+    "Finance": "Banking & Finance",
+    "Sports": "Entertainment & Media",
+    "Environment": "Energy & Environment",
+    "Media": "Entertainment & Media",
+    "Entertainment": "Entertainment & Media",
+    "Public Safety": "Public Safety",
+    "Security": "Public Safety",
+    "Visualization": "Data Visualization",
+    "Public Health": "Healthcare Analytics",
+    "Healthcare": "Healthcare Analytics",
+    "Segmentation": "Machine Learning",
+}
+
 # Theme categories and descriptions
 THEME_DESCRIPTIONS = {
     "Financial Analysis": "Stock price trends and volatility",
@@ -138,11 +164,24 @@ def generate_catalog_table(existing_days):
 
 def generate_themes(existing_days):
     """Generate project themes based on available projects."""
-    # For now, show all themes but this could be filtered based on released projects
+    if not existing_days:
+        return "*Themes will appear as projects are released*"
+    
+    # Collect themes from released projects
+    active_themes = set()
+    for day_num, _ in existing_days:
+        if day_num in PROJECT_METADATA:
+            domain = PROJECT_METADATA[day_num]['domain']
+            if domain in DOMAIN_TO_THEME:
+                active_themes.add(DOMAIN_TO_THEME[domain])
+    
+    # Generate theme list in order
     lines = []
-    for theme, description in THEME_DESCRIPTIONS.items():
-        lines.append(f"- **{theme}** — {description}")
-    return '\n'.join(lines)
+    for theme in THEME_DESCRIPTIONS.keys():
+        if theme in active_themes:
+            lines.append(f"- **{theme}** — {THEME_DESCRIPTIONS[theme]}")
+    
+    return '\n'.join(lines) if lines else "*Themes will appear as projects are released*"
 
 
 def update_readme():
