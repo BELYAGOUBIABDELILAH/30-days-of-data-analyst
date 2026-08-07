@@ -109,11 +109,6 @@ jobs:
           DAY: ${{ steps.target.outputs.day }}
           NEXT: ${{ fromJSON(steps.target.outputs.day) + 1 }}
 
-      - name: Update README with project catalog
-        run: |
-          python3 update_readme.py
-          echo "README updated successfully"
-
       - name: Commit and push
         run: |
           DAY="${{ steps.target.outputs.day }}"

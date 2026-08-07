@@ -1,12 +1,19 @@
-# Tesla Stock Analysis
+# Day 1 - Tesla Stock Analysis
 
-Analysis of Tesla stock price trends and patterns.
+## Overview
+Data analysis project focusing on tesla stock analysis.
 
-## Dataset
-- TSLA.csv
+## Files
+- `Day-1.ipynb` - Main analysis notebook
+- `data/` - Dataset(s) used in analysis
 
-## Tools
-- Python, Pandas, Matplotlib, Seaborn
+## Tools & Libraries
+- Python 3
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
 
-## Findings
-Stock price analysis and visualization.
+## Author
+[BELYAGOUBIABDELILAH](https://github.com/BELYAGOUBIABDELILAH)
