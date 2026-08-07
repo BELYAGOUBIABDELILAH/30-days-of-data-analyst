@@ -1,0 +1,126 @@
+name: Daily Release
+
+on:
+  schedule:
+    # 7 PM UTC+1 = 18:00 UTC
+    - cron: '0 18 * * *'
+  # Allow manual trigger for testing
+  workflow_dispatch:
+    inputs:
+      day_override:
+        description: 'Override day number to release (leave empty for auto)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  release-day:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Read current progress
+        id: progress
+        run: |
+          CURRENT=$(python3 -c "import json; print(json.load(open('progress.json'))['current_day'])")
+          TOTAL=$(python3 -c "import json; print(json.load(open('progress.json'))['total_days'])")
+          echo "current_day=$CURRENT" >> $GITHUB_OUTPUT
+          echo "total_days=$TOTAL" >> $GITHUB_OUTPUT
+          echo "Current day: $CURRENT / $TOTAL"
+
+      - name: Determine day to release
+        id: target
+        run: |
+          OVERRIDE="${{ github.event.inputs.day_override }}"
+          AUTO="${{ steps.progress.outputs.current_day }}"
+          if [ -n "$OVERRIDE" ]; then
+            DAY="$OVERRIDE"
+            echo "Manual override: releasing Day $DAY"
+          else
+            DAY="$AUTO"
+            echo "Auto schedule: releasing Day $DAY"
+          fi
+          echo "day=$DAY" >> $GITHUB_OUTPUT
+
+      - name: Check if challenge is complete
+        run: |
+          DAY="${{ steps.target.outputs.day }}"
+          TOTAL="${{ steps.progress.outputs.total_days }}"
+          if [ "$DAY" -gt "$TOTAL" ]; then
+            echo "All $TOTAL days have been released. Challenge complete!"
+            exit 0
+          fi
+
+      - name: Fetch staging branch
+        run: git fetch origin staging
+
+      - name: Find the day folder on staging
+        id: folder
+        run: |
+          DAY="${{ steps.target.outputs.day }}"
+          # List all folders on staging that match "Day X " pattern
+          FOLDER=$(git ls-tree --name-only origin/staging | grep -E "^Day $DAY " | head -1)
+          if [ -z "$FOLDER" ]; then
+            echo "ERROR: No folder found for Day $DAY on staging branch"
+            echo "Available folders:"
+            git ls-tree --name-only origin/staging
+            exit 1
+          fi
+          echo "Found folder: $FOLDER"
+          echo "name=$FOLDER" >> $GITHUB_OUTPUT
+
+      - name: Copy day folder from staging to main
+        run: |
+          FOLDER="${{ steps.folder.outputs.name }}"
+          git checkout origin/staging -- "$FOLDER"
+          echo "Copied: $FOLDER"
+
+      - name: Update progress.json
+        run: |
+          DAY="${{ steps.target.outputs.day }}"
+          NEXT=$((DAY + 1))
+          python3 << 'EOF'
+          import json, os
+
+          day = int(os.environ['DAY'])
+          next_day = int(os.environ['NEXT'])
+
+          with open('progress.json', 'r') as f:
+              data = json.load(f)
+
+          if day not in data['released_days']:
+              data['released_days'].append(day)
+          data['current_day'] = next_day
+
+          with open('progress.json', 'w') as f:
+              json.dump(data, f, indent=2)
+
+          print(f"Updated progress: Day {day} released. Next: Day {next_day}")
+          EOF
+        env:
+          DAY: ${{ steps.target.outputs.day }}
+          NEXT: ${{ fromJSON(steps.target.outputs.day) + 1 }}
+
+      - name: Commit and push
+        run: |
+          DAY="${{ steps.target.outputs.day }}"
+          FOLDER="${{ steps.folder.outputs.name }}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add .
+          git diff --cached --quiet && echo "Nothing to commit" && exit 0
+
+          git commit -m "Day $DAY: $(echo "$FOLDER" | sed 's/Day [0-9]* -//' | tr '-' ' ' | xargs)"
+          git push origin main
+
+          echo "Successfully released: $FOLDER"
