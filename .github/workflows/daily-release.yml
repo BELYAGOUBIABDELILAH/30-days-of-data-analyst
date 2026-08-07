@@ -107,7 +107,9 @@ jobs:
           EOF
         env:
           DAY: ${{ steps.target.outputs.day }}
-          NEXT: ${{ fromJSON(steps.target.outputs.day) + 1 }}
+
+      - name: Update README to show only released days
+        run: python3 update_readme.py
 
       - name: Commit and push
         run: |
