@@ -32,9 +32,8 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 ## Project Catalog
 
 | Day | Project | Domain | Stack | Link |
-
+| :--- | :--- | :--- | :--- | :--- |
 | **01** | [Tesla Stock Analysis](./Day%201%20-Tesla-Stock-Analysis) | Time Series | Pandas, Matplotlib, Seaborn | [Notebook](./Day%201%20-Tesla-Stock-Analysis/Day-1.ipynb) |
-| **02** | [Zomato Restaurant Analysis](./Day%202%20-Zomato-Restaurant-Analysis) | Food Industry | Pandas, NumPy, Seaborn | [Notebook](./Day%202%20-Zomato-Restaurant-Analysis/Day-2.ipynb) |
 
 ---
 

@@ -85,13 +85,11 @@ jobs:
 
       - name: Update progress.json
         run: |
-          DAY="${{ steps.target.outputs.day }}"
-          NEXT=$((DAY + 1))
-          python3 << 'EOF'
+          python3 - << 'EOF'
           import json, os
 
           day = int(os.environ['DAY'])
-          next_day = int(os.environ['NEXT'])
+          next_day = day + 1
 
           with open('progress.json', 'r') as f:
               data = json.load(f)
