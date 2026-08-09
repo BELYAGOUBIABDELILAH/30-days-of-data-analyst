@@ -73,7 +73,8 @@ def main():
     pre_table = content[:sep_end + 1]
     post_table = content[table_end:]
 
-    new_content = pre_table + '\n' + '\n'.join(filtered_rows) + '\n' + post_table
+    # Join rows without extra blank line before them
+    new_content = pre_table + '\n'.join(filtered_rows) + '\n' + post_table
 
     # Write back
     with open('README.md', 'w', encoding='utf-8') as f:
