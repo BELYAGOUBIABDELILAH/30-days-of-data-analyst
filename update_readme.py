@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
 Update README.md to show only released days.
-Reads progress.json to determine which days are released,
-then filters the project catalog table accordingly.
+First copies the full README from staging, then filters based on progress.json
 """
 import json
 import re
+import subprocess
 
 
 def main():
@@ -14,10 +14,24 @@ def main():
         progress = json.load(f)
 
     released_days = sorted(progress['released_days'])
+    
+    print(f"[INFO] Released days: {released_days}")
 
-    # Read README
-    with open('README.md', 'r', encoding='utf-8') as f:
-        content = f.read()
+    # Get the full README from staging branch
+    print("[INFO] Fetching full README from staging branch...")
+    result = subprocess.run(
+        ['git', 'show', 'origin/staging:README.md'],
+        capture_output=True,
+        text=True,
+        encoding='utf-8'
+    )
+    
+    if result.returncode != 0:
+        print("[ERROR] Could not fetch README from staging branch")
+        print(result.stderr)
+        return
+    
+    content = result.stdout
 
     # Find the project catalog table header line
     header_line = '| Day | Project | Domain | Stack | Link |'
@@ -43,6 +57,8 @@ def main():
     table_section = content[sep_end + 1:table_end]
     all_rows = [line.strip() for line in table_section.split('\n') if line.strip().startswith('|')]
 
+    print(f"[INFO] Total rows in staging README: {len(all_rows)}")
+
     # Filter rows to only include released days
     filtered_rows = []
     for row in all_rows:
@@ -51,12 +67,13 @@ def main():
             day_num = int(match.group(1))
             if day_num in released_days:
                 filtered_rows.append(row)
+                print(f"[INFO] Including Day {day_num:02d}")
 
     # Reconstruct: keep everything up to and including separator, then add filtered rows
     pre_table = content[:sep_end + 1]
     post_table = content[table_end:]
 
-    new_content = pre_table + '\n'.join(filtered_rows) + '\n' + post_table
+    new_content = pre_table + '\n' + '\n'.join(filtered_rows) + '\n' + post_table
 
     # Write back
     with open('README.md', 'w', encoding='utf-8') as f:
