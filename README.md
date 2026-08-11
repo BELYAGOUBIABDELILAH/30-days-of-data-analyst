@@ -37,6 +37,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **02** | [Zomato Restaurant Analysis](./Day%202%20-Zomato-Restaurant-Analysis) | Food Industry | Pandas, NumPy, Seaborn | [Notebook](./Day%202%20-Zomato-Restaurant-Analysis/Day-2.ipynb) |
 | **03** | [Amazon Electronics Analysis](./Day%203%20-Amazon-Electronics-Analysis) | E-commerce | Pandas, Power BI | [Notebook](./Day%203%20-Amazon-Electronics-Analysis/Day-3.ipynb) |
 | **04** | [Global GDP Analysis](./Day%204%20-Global-GDP-Analysis) | Macroeconomics | Pandas, SciPy, Scikit-learn | [Notebook](./Day%204%20-Global-GDP-Analysis/Day-4.ipynb) |
+| **05** | [Spotify Music Analysis](./Day%205%20-Spotify-Music-Analysis) | Clustering | Scikit-learn, Power BI | [Notebook](./Day%205%20-Spotify-Music-Analysis/Day-5.ipynb) |
 
 ---
 
