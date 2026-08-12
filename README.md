@@ -38,6 +38,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **03** | [Amazon Electronics Analysis](./Day%203%20-Amazon-Electronics-Analysis) | E-commerce | Pandas, Power BI | [Notebook](./Day%203%20-Amazon-Electronics-Analysis/Day-3.ipynb) |
 | **04** | [Global GDP Analysis](./Day%204%20-Global-GDP-Analysis) | Macroeconomics | Pandas, SciPy, Scikit-learn | [Notebook](./Day%204%20-Global-GDP-Analysis/Day-4.ipynb) |
 | **05** | [Spotify Music Analysis](./Day%205%20-Spotify-Music-Analysis) | Clustering | Scikit-learn, Power BI | [Notebook](./Day%205%20-Spotify-Music-Analysis/Day-5.ipynb) |
+| **06** | [Sales Dashboard](./Day%206%20-Sales-Dashboard) | Business Intelligence | Power BI, Excel | [Notebook](./Day%206%20-Sales-Dashboard/Day-6.ipynb) |
 
 ---
 
