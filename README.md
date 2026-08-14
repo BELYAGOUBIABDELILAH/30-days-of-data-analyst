@@ -40,6 +40,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **05** | [Spotify Music Analysis](./Day%205%20-Spotify-Music-Analysis) | Clustering | Scikit-learn, Power BI | [Notebook](./Day%205%20-Spotify-Music-Analysis/Day-5.ipynb) |
 | **06** | [Sales Dashboard](./Day%206%20-Sales-Dashboard) | Business Intelligence | Power BI, Excel | [Notebook](./Day%206%20-Sales-Dashboard/Day-6.ipynb) |
 | **07** | [Insurance Analysis](./Day%207%20-Insurance-Analysis) | Regression | Scikit-learn, XGBoost | [Notebook](./Day%207%20-Insurance-Analysis/Day-7.ipynb) |
+| **08** | [Twitter Stock Analysis](./Day%208%20-Twitter-Analysis) | Time Series | Pandas, Matplotlib | [Notebook](./Day%208%20-Twitter-Analysis/Day-8.ipynb) |
 
 ---
 
