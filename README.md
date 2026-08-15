@@ -41,6 +41,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **06** | [Sales Dashboard](./Day%206%20-Sales-Dashboard) | Business Intelligence | Power BI, Excel | [Notebook](./Day%206%20-Sales-Dashboard/Day-6.ipynb) |
 | **07** | [Insurance Analysis](./Day%207%20-Insurance-Analysis) | Regression | Scikit-learn, XGBoost | [Notebook](./Day%207%20-Insurance-Analysis/Day-7.ipynb) |
 | **08** | [Twitter Stock Analysis](./Day%208%20-Twitter-Analysis) | Time Series | Pandas, Matplotlib | [Notebook](./Day%208%20-Twitter-Analysis/Day-8.ipynb) |
+| **09** | [Economy Indicators](./Day%209%20-Economy-Indicators) | Macroeconomics | Pandas, Seaborn | [Notebook](./Day%209%20-Economy-Indicators/Day-9.ipynb) |
 
 ---
 
