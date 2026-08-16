@@ -42,6 +42,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **07** | [Insurance Analysis](./Day%207%20-Insurance-Analysis) | Regression | Scikit-learn, XGBoost | [Notebook](./Day%207%20-Insurance-Analysis/Day-7.ipynb) |
 | **08** | [Twitter Stock Analysis](./Day%208%20-Twitter-Analysis) | Time Series | Pandas, Matplotlib | [Notebook](./Day%208%20-Twitter-Analysis/Day-8.ipynb) |
 | **09** | [Economy Indicators](./Day%209%20-Economy-Indicators) | Macroeconomics | Pandas, Seaborn | [Notebook](./Day%209%20-Economy-Indicators/Day-9.ipynb) |
+| **10** | [Bank Bankruptcy Analysis](./Day%2010%20-Bank-Bankruptcy-Analysis) | Classification | Scikit-learn, Logistic Regression | [Notebook](./Day%2010%20-Bank-Bankruptcy-Analysis/Day-10.ipynb) |
 
 ---
 
