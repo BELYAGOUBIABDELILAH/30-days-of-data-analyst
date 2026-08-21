@@ -47,6 +47,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **12** | [Sales Performance Analysis](./Day%2012%20-Sales-Performance-Analysis) | Sales Analytics | Pandas, Matplotlib | [Notebook](./Day%2012%20-Sales-Performance-Analysis/Day-12.ipynb) |
 | **13** | [Sales Team Performance](./Day%2013%20-Sales-Team-Performance) | Sales Analytics | Pandas, Seaborn | [Notebook](./Day%2013%20-Sales-Team-Performance/Day-13.ipynb) |
 | **14** | [Supermarket Analysis](./Day%2014%20-Supermarket-Analysis) | Retail | Pandas, NumPy | [Notebook](./Day%2014%20-Supermarket-Analysis/Day-14.ipynb) |
+| **15** | [Romanian Energy Prices](./Day%2015%20-Romanian-Energy-Prices) | Energy | Pandas, Matplotlib | [Notebook](./Day%2015%20-Romanian-Energy-Prices/Day-15.ipynb) |
 
 ---
 
