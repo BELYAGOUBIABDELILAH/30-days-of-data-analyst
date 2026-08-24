@@ -50,6 +50,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **15** | [Romanian Energy Prices](./Day%2015%20-Romanian-Energy-Prices) | Energy | Pandas, Matplotlib | [Notebook](./Day%2015%20-Romanian-Energy-Prices/Day-15.ipynb) |
 | **16** | [Credit Card Analysis](./Day%2016%20-Credit-Card-Analysis) | Finance | Pandas, Seaborn | [Notebook](./Day%2016%20-Credit-Card-Analysis/Day-16.ipynb) |
 | **17** | [Cricket Rankings Analysis](./Day%2017%20-Sports-Rankings) | Sports | Pandas, NumPy | [Notebook](./Day%2017%20-Sports-Rankings/Day-17.ipynb) |
+| **18** | [Delhi Air Quality](./Day%2018%20-Delhi-Air-Quality) | Environment | Pandas, Matplotlib | [Notebook](./Day%2018%20-Delhi-Air-Quality/Day-18.ipynb) |
 
 ---
 
