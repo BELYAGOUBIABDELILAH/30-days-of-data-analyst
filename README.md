@@ -53,6 +53,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **18** | [Delhi Air Quality](./Day%2018%20-Delhi-Air-Quality) | Environment | Pandas, Matplotlib | [Notebook](./Day%2018%20-Delhi-Air-Quality/Day-18.ipynb) |
 | **19** | [YouTube Channels Analysis](./Day%2019%20-YouTube-Channels-Analysis) | Media | Pandas, Seaborn | [Notebook](./Day%2019%20-YouTube-Channels-Analysis/Day-19.ipynb) |
 | **20** | [Movie Analysis](./Day%2020%20-Movie-Analysis) | Entertainment | Pandas, Matplotlib | [Notebook](./Day%2020%20-Movie-Analysis/Day-20.ipynb) |
+| **21** | [Cisco Stock Analysis](./Day%2021%20-Cisco-Stock-Analysis) | Time Series | Pandas, Matplotlib, Seaborn | [Notebook](./Day%2021%20-Cisco-Stock-Analysis/Day-21.ipynb) |
 
 ---
 
