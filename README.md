@@ -55,6 +55,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **20** | [Movie Analysis](./Day%2020%20-Movie-Analysis) | Entertainment | Pandas, Matplotlib | [Notebook](./Day%2020%20-Movie-Analysis/Day-20.ipynb) |
 | **21** | [Cisco Stock Analysis](./Day%2021%20-Cisco-Stock-Analysis) | Time Series | Pandas, Matplotlib, Seaborn | [Notebook](./Day%2021%20-Cisco-Stock-Analysis/Day-21.ipynb) |
 | **22** | [Emergency Calls Analysis](./Day%2022%20-Emergency-Calls-Analysis) | Public Safety | Pandas, Seaborn | [Notebook](./Day%2022%20-Emergency-Calls-Analysis/Day-22.ipynb) |
+| **23** | [Global Terrorism Analysis](./Day%2023%20-Global-Terrorism-Analysis) | Security | Pandas, Openpyxl | [Notebook](./Day%2023%20-Global-Terrorism-Analysis/Day-23.ipynb) |
 
 ---
 
