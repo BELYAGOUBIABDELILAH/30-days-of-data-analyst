@@ -58,6 +58,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **23** | [Global Terrorism Analysis](./Day%2023%20-Global-Terrorism-Analysis) | Security | Pandas, Openpyxl | [Notebook](./Day%2023%20-Global-Terrorism-Analysis/Day-23.ipynb) |
 | **24** | [Global Terrorism Dashboard](./Day%2024%20-Global-Terrorism-Dashboard) | Visualization | Power BI | [Dashboard](./Day%2024%20-Global-Terrorism-Dashboard/Global_terrorism_index.pbix) |
 | **25** | [Horror Movies Analysis](./Day%2025%20-Horror-Movies-Analysis) | Entertainment | Pandas, Seaborn | [Notebook](./Day%2025%20-Horror-Movies-Analysis/Day-25.ipynb) |
+| **26** | [Billionaire Wealth Analysis](./Day%2026%20-Billionaire-Analysis) | Finance | Pandas, NumPy | [Notebook](./Day%2026%20-Billionaire-Analysis/Day-26.ipynb) |
 
 ---
 
