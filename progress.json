@@ -1,5 +1,5 @@
 {
-  "current_day": 28,
+  "current_day": 29,
   "total_days": 30,
   "released_days": [
     1,
@@ -28,7 +28,8 @@
     24,
     25,
     26,
-    27
+    27,
+    28
   ],
   "start_date": "2026-08-08",
   "schedule": "19:00 UTC+1 (18:00 UTC) daily"
