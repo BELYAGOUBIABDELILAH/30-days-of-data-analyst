@@ -61,6 +61,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **26** | [Billionaire Wealth Analysis](./Day%2026%20-Billionaire-Analysis) | Finance | Pandas, NumPy | [Notebook](./Day%2026%20-Billionaire-Analysis/Day-26.ipynb) |
 | **27** | [COVID-19 Analysis](./Day%2027%20-COVID-Analysis) | Public Health | SQL, Excel | [SQL](./Day%2027%20-COVID-Analysis/sheet.sql) |
 | **28** | [Medical Conditions Analysis](./Day%2028%20-Medical-Conditions-Analysis) | Healthcare | Scikit-learn, Random Forest | [Notebook](./Day%2028%20-Medical-Conditions-Analysis/Day-28.ipynb) |
+| **29** | [Retail Customer Analytics](./Day%2029%20-Retail-Analytics) | Segmentation | Pandas, NumPy | [Notebook](./Day%2029%20-Retail-Analytics/Day-29.ipynb) |
 
 ---
 
