@@ -62,6 +62,7 @@ A structured 30-day portfolio covering predictive modeling, exploratory data ana
 | **27** | [COVID-19 Analysis](./Day%2027%20-COVID-Analysis) | Public Health | SQL, Excel | [SQL](./Day%2027%20-COVID-Analysis/sheet.sql) |
 | **28** | [Medical Conditions Analysis](./Day%2028%20-Medical-Conditions-Analysis) | Healthcare | Scikit-learn, Random Forest | [Notebook](./Day%2028%20-Medical-Conditions-Analysis/Day-28.ipynb) |
 | **29** | [Retail Customer Analytics](./Day%2029%20-Retail-Analytics) | Segmentation | Pandas, NumPy | [Notebook](./Day%2029%20-Retail-Analytics/Day-29.ipynb) |
+| **30** | [Used Car Price Analysis](./Day%2030%20-Used-Car-Analysis) | Regression | Scikit-learn, XGBoost | [Notebook](./Day%2030%20-Used-Car-Analysis/Day-30.ipynb) |
 
 ---
 
